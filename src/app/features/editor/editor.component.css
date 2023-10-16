@@ -15,3 +15,24 @@ input, select {
     color: #fff;
     border: 1px solid #e9ff92;
 }
+
+.close-button {
+    background-color: #031403;
+    color: #fff;
+    border: 1px solid #e9ff92;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: 2px 2px 0px #e9ff92;
+
+}
+
+.close-button:hover {
+    background-color: #e9ff92;
+    color: #031403;
+    box-shadow: 2px 2px 0px #031403;
+
+}
