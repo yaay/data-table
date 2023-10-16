@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: "Product Sans", "Helvetica Neue", sans-serif;
+    background-color: #031403;
+    color: #fff;
+ }
+
+
+button {
+    background-color: #031403;
+    border: 1px solid #e9ff92;
+    padding: 0.6rem 1rem;
+    border-radius: 0.7rem;
+    color: #fff;
+    box-shadow: 2px 2px 0px #e9ff92;
+}
+
+button:hover {
+    background-color: #e9ff92;
+    color: #031403;
+}

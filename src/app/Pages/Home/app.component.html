@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row pt-5">
+    <div>
+      <button class="mb-4" (click)="openAdd()">Add User</button>
+      <table class="">
+        <thead>
+          <tr>
+            <th style="border-radius: 1rem 0 0 0;" scope="col">Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Testimonial</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Edit</th>
+            <th style="border-radius: 0 1rem 0 0;" scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody #tableHeader>
+          <tr *ngFor="let user of tableData">
+            <th scope="row">{{ user.name }}</th>
+            <td>{{ user.company }}</td>
+            <td>{{ user.testimonial }}</td>
+            <td>{{ user.rating }}</td>
+            <td><button class="" (click)="openEdit(user)">Edit</button></td>
+            <td><button class="" (click)="deleteUser(user.id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="data-edit" [hidden]="!editBox">
+      <app-editor [userData]="selectedUser" (closeForm)="onCloseForm()" [newUser]="addUser"></app-editor>
+    </div>
+
+  </div>
