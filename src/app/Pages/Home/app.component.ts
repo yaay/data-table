@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.fetchData()
+    console.log(this)
 
   }
 
@@ -52,6 +53,6 @@ export class AppComponent implements OnInit {
 
   onCloseForm() {
     this.editBox = false
-    this.ngOnInit()
+    this.fetchData()
   }
 }
