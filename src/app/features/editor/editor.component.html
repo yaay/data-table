@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-white">
     <div class="row justify-content-end">
-        <div class="close-button">
-            <p class="text-right" style="direction: rtl;" (click)="onClose()">x</p>
+        <div class="close-button"  (click)="onClose()">
+            <p class="text-right" style="direction: rtl;">x</p>
         </div>
     </div>
     <div class="rows-gap">
@@ -15,12 +15,12 @@
                 <input type="text" class="form-control" id="company" formControlName="company">
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col">
                 <label for="date" style="margin-bottom: 0.5rem">Date</label>
                 <input type="text" class="form-control" id="date" formControlName="date">
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="form-group col-6">
                 <label for="testimonial">Testimonial</label>

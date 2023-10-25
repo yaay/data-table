@@ -21,6 +21,7 @@ button {
 }
 
 button:hover {
-    background-color: #e9ff92;
-    color: #031403;
+    /* background-color: #e9ff92;
+    color: #031403; */
+    box-shadow: 0.5px 1px 0px #e9ff92;
 }

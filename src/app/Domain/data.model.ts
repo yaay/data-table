@@ -4,5 +4,4 @@ export class Data {
     company?: string;
     testimonial?: string;
     rating?: number;
-    date?: string;
   }

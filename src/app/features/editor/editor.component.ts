@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DataService } from 'src/app/Domain/data.service';
 
@@ -7,7 +7,7 @@ import { DataService } from 'src/app/Domain/data.service';
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css']
 })
-export class EditorComponent {
+export class EditorComponent implements OnChanges {
   @Input() userData: any = []
   @Input() newUser: boolean = false
   @Output() closeForm = new EventEmitter()
@@ -28,17 +28,15 @@ export class EditorComponent {
 
 
   ngOnChanges() {
-    if (this.newUser) {
-      this.form.reset();
-    } else {
+    if (!this.newUser) {
       this.form.patchValue(this.userData);
     }
   }
 
   onClose() {
     this.closeForm.emit()
+    this.form.reset();
   }
-
 
 
   onSubmit() {

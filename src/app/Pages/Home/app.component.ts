@@ -16,21 +16,23 @@ export class AppComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
 
-  tableData!: Data[] 
+  tableData: Data[] = []
 
   ngOnInit() {
     this.fetchData()
-    console.log(this)
 
   }
 
   fetchData() {
+    // const dataArray = []
+    this.tableData = []
     this.dataService.getAll().subscribe(
       (usersData) => {
-        this.tableData = usersData
+        for (const user in usersData) {
+        this.tableData.push(usersData[user])
+        }
+      })
       }
-    )
-  }
 
 
   deleteUser(id: any) {
